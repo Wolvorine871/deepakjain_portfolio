@@ -4,6 +4,9 @@ body {
     font-size: 30px;
 }
 
+body::-webkit-scrollbar { 
+    display: none; 
+}
 
 
 /* Body Header */
@@ -22,8 +25,56 @@ body {
 
 /* Horizontal Lists */
 
-.horizontal-list {
+.bars{
+    color: white;
+    margin: 0;
+    margin-right: 5%;
+    display: none;
+}
+
+.bars i {
+    font-size: 2rem;
+}
+
+.dropdown-list{
+    margin: 0;
+    display: none;
+    background-color: #828470;
+    box-shadow: 0px 4px 8px 1px #535547;
+}
+
+.dropdown-list ul{
+    margin: 0.2rem 0.2rem;
+    text-align: left;
+    padding: 0px 0.8rem;
+}
+
+.dropdown-menu:hover .dropdown-list{
+    display: block;
+    position: absolute;
+    right: 3%;
+}
+
+.dropdown-list li{
+    margin: 0.4rem 0px;
+}
+
+.no-list-style{
     list-style: none;
+}
+
+.no-list-style li {
+    font-weight: 100;
+    font-size: 0.9rem;
+}
+
+.no-list-style li a{
+    list-style: none;
+    color: white;
+    text-decoration: none;
+}
+
+.horizontal-list {
     padding-left: 0px;
     margin: 0px;
 }
@@ -31,14 +82,8 @@ body {
 .horizontal-list li {
     display: inline-block;
     margin: 0px 8px 8px 0px;
-    font-weight: 100;
-    font-size: 0.9rem;
 }
 
-.horizontal-list li a {
-    color: white;
-    text-decoration: none;
-}
 
 .nav-menu li a {
     transition: color 0.5s, border-bottom 4s;
@@ -48,11 +93,6 @@ body {
     color: lightgrey;
     border-bottom: 1px solid black;
 }
-
-.text-center {
-    text-align: center;
-}
-
 
 
 /* Name and Social Icons*/
@@ -146,8 +186,6 @@ section:nth-child(2n + 1) {
     line-height: 28px;
     font-size: 1.1rem;
     margin: auto;
-    margin-top: 10vh;
-    /* margin-top: 5rem; */
 }
 
 
@@ -243,13 +281,12 @@ section:nth-child(2n + 1) {
 #timeline-divider {
     position: absolute;
     width: 0;
-    top: 10%;
+    top: 4.9%;    
     left: 50%;
     border: 1px dashed #0096fa6b;
-    height: 75%;
+    height: 79%;
     color: #433E3F;
 }
-
 
 #timeline-divider .timeline-traveller {
     position: sticky;
@@ -264,6 +301,13 @@ section:nth-child(2n + 1) {
     color: #2857a4;
 }
 
+
+#timeline-divider_education .timeline-traveller {
+    position: sticky;
+    top: 135px;
+    z-index: 2;
+}
+
 #timeline-divider_education {
     position: absolute;
     width: 0;
@@ -274,19 +318,15 @@ section:nth-child(2n + 1) {
     color: #433E3F;
 }
 
-
-#timeline-divider_education .timeline-traveller {
-    position: sticky;
-    top: 135px;
-    z-index: 2;
-}
-
 #timeline-divider_education i {
     transform: rotate(90deg);
     margin-top: -35px;
     display: block;
     color: #2857a4;
 }
+
+
+
 
 .experience-designation {
     font-size: 1.4rem;
@@ -313,9 +353,6 @@ section:nth-child(2n + 1) {
     line-height: 20px;
 }
 
-.text-align-justify {
-    text-align: justify;
-}
 
 .see_credential a{
     text-decoration: none;
@@ -327,6 +364,9 @@ section:nth-child(2n + 1) {
 .see_credential a:hover{
     color: darkgray;
 }
+
+
+
 
 /* Portfolio Section */
 
@@ -353,7 +393,7 @@ section:nth-child(2n + 1) {
     height: 100%;
 }
 
-.portfolio-details{
+.portfolio-details {
     transition: all 0.5s ease-in-out;
     position: absolute;
     top: 0;
@@ -488,7 +528,19 @@ button:focus {
     outline: none;
 }
 
+/* Common Text Align Classes */
 
+.text-right{
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
 
 /* Common Margin Classes */
 
@@ -508,42 +560,11 @@ button:focus {
 
 /*common color classes */
 
-.text-highlight-blue {
+.text-highlight {
     color: #2857a4;
     font-weight: 600;
-}
-.text-highlight-orange {
-    color: #ec4d1c;
-    font-weight: 600;
-}
-.text-highlight-onion {
-    color: #E498EE;
-    font-weight: 600;
-}
-.text-highlight-green {
-    color: #4FEECB;
-    font-weight: 600;
-}
-.text-highlight-skyblue {
-    color: #4FEECB;
-    font-weight: 600;
-}
-.text-highlight-teal {
-    color: #0b8176;
-    font-weight: 600;
-}
-.text-highlight-red {
-    color: #ff3300;
-    font-weight: 600;
-}
-.text-highlight-purple {
-    color: #93738c;
-    font-weight: 600;
-}
 
-
-
-
+}
 
 
 /* setting background-color */
@@ -583,6 +604,7 @@ button:focus {
 
 /*Percentage Classes */
 
+
 .eighty-five-percent {
     height: inherit;
     width: 85%;
@@ -609,3 +631,105 @@ button:focus {
     width: 68%;
     height: inherit;
 }
+#rightsreserve{
+    font-size: 0.8rem;
+}
+
+
+/*common color classes */
+
+.text-highlight-blue {
+    color: #2857a4;
+    font-weight: 600;
+}
+.text-highlight-orange {
+    color: #ec4d1c;
+    font-weight: 600;
+}
+.text-highlight-onion {
+    color: #E498EE;
+    font-weight: 600;
+}
+.text-highlight-green {
+    color: #4FEECB;
+    font-weight: 600;
+}
+.text-highlight-skyblue {
+    color: #4FEECB;
+    font-weight: 600;
+}
+.text-highlight-teal {
+    color: #0b8176;
+    font-weight: 600;
+}
+.text-highlight-red {
+    color: #ff3300;
+    font-weight: 600;
+}
+.text-highlight-purple {
+    color: #93738c;
+    font-weight: 600;
+}
+
+
+
+@media only screen and (max-width: 572px) {
+    
+    .timeline-box {
+        width: 100%;
+        left: 10% !important;
+    }
+
+    .bars {
+        display: block;
+    }
+    
+    
+    .nav-menu {
+        display: none;
+    } 
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+
+    .timeline-box {
+        width: 90%;
+        left: 10% !important;
+    }
+
+    .timeline-box::after {
+        left: -10.5% !important;
+    }
+
+    #timeline-divider {
+        top: 4.9%;
+        left: 2%;
+    }
+    #timeline-divider_education{
+        top: 8%;
+        left: 2%;
+    }
+
+    #contact-form {
+        margin-left: 0%;
+    }
+
+    #contact-container {
+        flex-wrap: wrap;
+    }
+
+    #my-details-container {
+        width: 80%;
+        margin: 10%;
+    }
+
+    #contact-form-container {
+        width: 80%;
+        margin: 10%;
+    }
+
+}
+
